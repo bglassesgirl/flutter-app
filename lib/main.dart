@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fundamentos/homepage.dart';
+import 'package:flutter_fundamentos/homepage_statefull.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: HomePageStatefull(),
+      // const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
