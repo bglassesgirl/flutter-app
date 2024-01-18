@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fundamentos/homepage.dart';
-import 'package:flutter_fundamentos/homepage_statefull.dart';
+
+import 'home/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Container(),
+      home: HomePage(),
     );
   }
 }
