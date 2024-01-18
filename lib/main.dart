@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'imagens/imagens_page.dart';
+import 'package:flutter_fundamentos/home/home_page_container.dart';
 
 
 void main() {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ImagesPage(),
+      home: HomePage(),
     );
   }
 }
