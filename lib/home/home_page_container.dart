@@ -1,6 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.amber,
             borderRadius: BorderRadius.circular(30),
+            // ignore: prefer_const_literals_to_create_immutables
             boxShadow: [
               BoxShadow(
                 color:Colors.black,
@@ -31,7 +32,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
         )
-        ),
-    );
+        );
   }
 }
