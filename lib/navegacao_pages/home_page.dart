@@ -10,12 +10,20 @@ class HomePage extends StatelessWidget {
         title: const Text('Home'),
       ),
       body: Center(
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).pushNamed('/detalhe');
-          },
-          child: Text('Ir para detalhe'),
-        ),
+        child: Column(children: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('/detalhe');
+            },
+            child: const Text('Ir para detalhe'),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('/detalhe2');
+            },
+            child: const Text('Ir para detalhe2'),
+          ),
+        ]),
       ),
     );
   }

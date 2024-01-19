@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fundamentos/core/navigator_observer_custom.dart';
 import 'package:flutter_fundamentos/navegacao_pages/detalhe.dart';
+import 'package:flutter_fundamentos/navegacao_pages/detalhe2.dart';
 import 'navegacao_pages/home_page.dart';
 
 void main() {
@@ -30,10 +31,11 @@ class MyApp extends StatelessWidget {
           );
         }
       },
-      // routes: {
-      //   '/': (_) => HomePage(),
-      //   '/detalhe': (_) => DetalhePage(),
-      // },
+      routes: {
+        '/': (_) => HomePage(),
+        // '/detalhe': (_) => DetalhePage(),
+        '/detalhe2': (_) => const Detalhe2(),
+      },
     );
   }
 }
