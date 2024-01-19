@@ -11,7 +11,7 @@ class Detalhe2 extends StatelessWidget {
            body: Center(
             child: TextButton(
               onPressed: () {
-                Navigator.of(context).pop('produto cadastrado')
+                Navigator.of(context).pop('produto cadastrado');
               },
               child: const Text('Voltar'),
               ),

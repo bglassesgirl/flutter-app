@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_fundamentos/navegacap_parametros/detalhe.dart';
+
 
 class Lista extends StatelessWidget {
   const Lista({super.key});

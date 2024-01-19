@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_fundamentos/navegacao/page1.dart';
+import 'package:flutter_fundamentos/p/navegacao/page1.dart';
 
 class Page4 extends StatelessWidget {
   const Page4({super.key});
@@ -10,7 +8,7 @@ class Page4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 4'),),
+        title: const Text('Page 4'),),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -27,8 +25,8 @@ class Page4 extends StatelessWidget {
                 //removendo todas as paginas ATE a pag inicial
                 Navigator.of(context).pushAndRemoveUntil(
                   MaterialPageRoute(
-                    settings: RouteSettings(name: 'page1'),
-                    builder: (context) => Page1(),
+                    settings: const RouteSettings(name: 'page1'),
+                    builder: (context) => const Page1(),
                     ),
                   (route) => route.isFirst);
 
@@ -37,15 +35,15 @@ class Page4 extends StatelessWidget {
                   // apenar com a atual (pag4), ideal para paginas de login,
                   // onde fecha toda pilha e vai direto para a pagina inicial
                },
-                child: Text('page1 via page'),
+                child: const Text('page1 via page'),
                ),
                ElevatedButton(
                 onPressed: (){
                   Navigator.of(context).pop();
                 },
-                child: Text('pop'),
+                child: const Text('pop'),
                ),
-               ElevatedButton(onPressed: (){}, child: Text('page1 via named')),
+               ElevatedButton(onPressed: (){}, child: const Text('page1 via named')),
             ],
           ),
         ),

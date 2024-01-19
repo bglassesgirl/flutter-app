@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class Page1 extends StatelessWidget {
   const Page1({super.key});
@@ -9,7 +8,7 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 1'),),
+        title: const Text('Page 1'),),
         body: Container(),
     );
   }

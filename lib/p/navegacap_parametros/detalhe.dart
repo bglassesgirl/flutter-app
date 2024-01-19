@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Detalhe extends StatefulWidget {
   const Detalhe({Key? key}) : super(key: key);
@@ -15,7 +13,7 @@ class _DetalheState extends State<Detalhe> {
   @override
   void initState(){
     super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       final param =
         ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
       setState(() {
@@ -28,7 +26,7 @@ class _DetalheState extends State<Detalhe> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('detalhes')
+        title: const Text('detalhes')
       ),
       body: Center(child: Text('o id do produto é $id'),),
     );

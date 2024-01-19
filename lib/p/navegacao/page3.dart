@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_fundamentos/navegacao/page4.dart';
+import 'package:flutter_fundamentos/p/navegacao/page4.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({super.key});
@@ -10,7 +8,7 @@ class Page3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 4'),
+        title: const Text('Page 4'),
         ),
          body: Center(
           child: Column(
@@ -19,22 +17,22 @@ class Page3 extends StatelessWidget {
                ElevatedButton(onPressed: (){
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    settings: RouteSettings(name: 'page4'),
-                    builder: (context) => Page4(),
+                    settings: const RouteSettings(name: 'page4'),
+                    builder: (context) => const Page4(),
                     ),
                   );
                },
-                child: Text('page4 via page'),
+                child: const Text('page4 via page'),
                ),
                ElevatedButton(
                 onPressed: (){
                   Navigator.of(context).pop();
                 },
-                child: Text('pop'),
+                child: const Text('pop'),
                ),
                ElevatedButton(onPressed: (){
                  Navigator.of(context).pushNamed('/page4');
-               }, child: Text('page4 via named')),
+               }, child: const Text('page4 via named')),
             ],
           ),
         ),

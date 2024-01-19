@@ -7,7 +7,7 @@ class ImagesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text ('Images'),
+        title: const Text ('Images'),
         backgroundColor: Colors.orange[600],
         ),
         body: Center(
@@ -16,14 +16,14 @@ class ImagesPage extends StatelessWidget {
               Container(
                 height: 300,
                 width: 300,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/newyork-city.jpg')
                     )
                     ),
-                child: Text('New York'),
+                child: const Text('New York'),
                 ),
-                Container(
+                SizedBox(
                 height: 300,
                 width: 300,
                 child: Image.network(
