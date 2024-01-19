@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fundamentos/navegacao/page1.dart';
-import 'package:flutter_fundamentos/navegacao/page2.dart';
-import 'package:flutter_fundamentos/navegacao/page3.dart';
-import 'package:flutter_fundamentos/navegacao/page4.dart';
-import 'package:flutter_fundamentos/navegacap_parametros/detalhe.dart';
-import 'package:flutter_fundamentos/navegacap_parametros/lista.dart';
-import 'navegacao/home_page.dart' as navegacao;
+import 'package:flutter_fundamentos/core/navigator_observer_custom.dart';
+import 'package:flutter_fundamentos/navegacao_pages/detalhe.dart';
+import 'navegacao_pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,18 +13,27 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // home: navegacao.HomePage(),
-      initialRoute: '/navegacao_parametros',
-      routes: {
-        // '/':(_) => navegacao.HomePage(),
-        // '/page1':(_) => Page1(),
-        // '/page2':(_) => Page2(),
-        // '/page3':(_) => Page3(),
-        // '/page4':(_) => Page4(),
-        '/navegacao_parametros' : (_) => Lista(),
-        '/detalhe': (_) => Detalhe(),
 
+      navigatorObservers: [NavigatorObserverCustom()],
+
+      onGenerateRoute: (RouteSettings settings) {
+        if (settings.name == '/') {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (context) => HomePage(),
+          );
+        }
+         if (settings.name == '/detalhe') {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (context) => DetalhePage(),
+          );
+        }
       },
+      // routes: {
+      //   '/': (_) => HomePage(),
+      //   '/detalhe': (_) => DetalhePage(),
+      // },
     );
   }
 }
