@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fundamentos/pages/container/container_page.dart';
 import 'package:flutter_fundamentos/pages/home/home_page.dart';
+import 'package:flutter_fundamentos/pages/rows_columns/rows_columns.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(_) => const HomePage(),
         '/container': (_) => const ContainerPage(),
+        '/rows_columns':(_) => const RowsColumns(),
       },
 
     );
